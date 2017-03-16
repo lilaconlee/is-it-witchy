@@ -1,0 +1,12 @@
+{
+  "name": "is-it-witchy",
+  "scripts": {
+   "build": "browserify main.js -o bundle.js",
+   "watch": "watchify main.js -o bundle.js"
+  },
+  "author": "Lila Conlee <lila.conlee@gmail.com>",
+  "devDependencies": {
+    "browserify": "^14.1.0",
+    "watchify": "^3.9.0"
+  }
+}

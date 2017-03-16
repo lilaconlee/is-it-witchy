@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       body {
+         font-family: fantasy;
+         font-size: 5vw;
+         text-align: center;
+         background: rebeccapurple;
+       }
+
+       input {
+         background: #F9F9F9;
+         border: 0;
+         box-shadow: inset 0px 1px 1px #e0e4e9;
+         font-size: 5vw;
+       }
+
+       form {
+         padding: 2vw;
+       }
+    </style>
+  </head>
+  <body>
+    <form id="witchy-form">
+      <span>is it witchy?</span>
+      <br>
+      <input type="text" id="witchy-item" autocomplete="off" autofocus>
+      <input type="submit" value="&#9651;">
+    </form>
+    <span id="witchy-result"></span>
+    <br>
+    <img border="0" src="images/bubbling_cauldron.gif">
+    <script src="./bundle.js"></script>
+  </body>
+</html>

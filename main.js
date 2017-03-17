@@ -1,7 +1,12 @@
 var form = document.getElementById('witchy-form');
-var result = document.getElementById('witchy-result');
-var items = require('./items.js');
 var input = document.getElementById('witchy-item');
+var items = require('./items.js');
+var pluralize = require('pluralize');
+var result = document.getElementById('witchy-result');
+
+var pluralItems = items.map(function (item) {
+  return pluralize.plural(item);
+});
 
 form.addEventListener('submit', witchCheck);
 
@@ -15,6 +20,6 @@ function witchCheck(event) {
   }
 }
 
-function isWitchy(inputValue) {
-  return items.indexOf(inputValue.toLowerCase()) !== -1;
+function isWitchy(value) {
+  return items.indexOf(value.toLowerCase()) !== -1 || pluralItems.indexOf(value.toLowerCase()) !== -1
 }

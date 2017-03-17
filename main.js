@@ -8,9 +8,13 @@ form.addEventListener('submit', witchCheck);
 function witchCheck(event) {
   event.preventDefault();
 
-  if (items.indexOf(input.value) === -1) {
-    result.textContent = 'not witchy';
-  } else {
+  if (isWitchy(input.value)) {
     result.textContent = 'witchy';
+  } else {
+    result.textContent = 'not witchy';
   }
+}
+
+function isWitchy(inputValue) {
+  return items.indexOf(inputValue.toLowerCase()) !== -1;
 }

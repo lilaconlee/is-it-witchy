@@ -123,5 +123,5 @@ module.exports = [
   'whisker',
   'willow',
   'witch',
-  'wraught iron',
+  'wrought iron',
 ];
